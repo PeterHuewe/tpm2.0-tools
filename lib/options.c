@@ -262,7 +262,7 @@ get_common_opts (int                    *argc_param,
             .flag    = NULL,
             .val     = 'v',
         },
-        { .name = NULL
+        { .name = NULL,
           .has_arg = no_argument,
           .flag = NULL,
            .val = 0,
