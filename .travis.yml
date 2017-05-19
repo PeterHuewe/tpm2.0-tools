@@ -42,7 +42,7 @@ before_script:
 script:
   - mkdir ./build
   - pushd ./build
-  - CFLAGS=-Wno-missing-field-initializers ../configure --enable-unit
+  - CFLAGS=-Wno-missing-field-initializers CPPFLAGS=-Wno-missing-field-initializers ../configure --enable-unit
   - make -j$(nproc)
   - make -j$(nproc) check
   - make -j$(nproc) clean
