@@ -74,7 +74,7 @@ if [ $? != 0 ];then
 	fail makecredential 
 fi
 
-tpm2_activatecredential  -H $handle_ak -k $handle_ek -f $output_mkcredential  -o $output_actcredential
+strace tpm2_activatecredential  -H $handle_ak -k $handle_ek -f $output_mkcredential  -o $output_actcredential
 if [ $? != 0 ];then
 	fail activatecredential 
 fi
