@@ -206,7 +206,7 @@ static bool activate_credential_and_output(TSS2_SYS_CONTEXT *sapi_context,
     tmp_auth.hmac.t.size = 0;
 
     rval = Tss2_Sys_ActivateCredential(sapi_context, ctx->handle.activate,
-            ctx->handle.key, &cmd_auth_array_password, &ctx->credentialBlob, &ctx->secret,
+            ctx->handle.key, &cmd_auth_array_password, NULL, &ctx->secret,
             &certInfoData, 0);
     if (rval != TPM_RC_SUCCESS) {
         LOG_ERR("ActivateCredential failed. TPM Error:0x%x", rval);
